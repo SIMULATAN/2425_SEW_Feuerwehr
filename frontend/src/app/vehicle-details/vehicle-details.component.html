@@ -1,0 +1,35 @@
+@if (vehicle != undefined) {
+  <div>
+    <h1>{{ vehicle.callSign }}</h1>
+    <p>Id: {{ vehicle.id }}</p>
+    <p>Type: {{ vehicle.type }}</p>
+
+    <h2>Send new status</h2>
+    <form [formGroup]="this.radioMessageForm" (ngSubmit)="onSubmit()" style="display: flex; align-items: center; gap: 1em;">
+      <mat-form-field class="full-width">
+        <mat-label>Status</mat-label>
+        <select matNativeControl required (change)="selectionChange($event)">
+          @for (code of this.radioCodes; track code.number) {
+            <option [value]="code.number">{{ code.name }}</option>
+          }
+        </select>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Incident</mat-label>
+        <select matNativeControl required (change)="incidentChange($event)">
+          <option [value]="null"></option>
+          @for (incident of this.incidents; track incident.id) {
+            <option [value]="incident.id">{{ incident.description }}</option>
+          }
+        </select>
+      </mat-form-field>
+
+      <button mat-flat-button type="submit">Send</button>
+    </form>
+
+    <h2>Radio Messages</h2>
+    <app-radiomessage-list [radioMessages]="vehicle.radioMessages" [dataSocketService]="dataSocketService"></app-radiomessage-list>
+  </div>
+} @else {
+  Loading...
+}

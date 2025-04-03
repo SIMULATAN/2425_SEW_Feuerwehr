@@ -1,0 +1,11 @@
+@if (incident != undefined) {
+  <div>
+    <h1>{{incident.description}}</h1>
+    <p>Id: {{incident.id}}</p>
+    <p>Level: {{incident.level}}</p>
+
+    <app-radiomessage-list [radioMessages]="incident.radioMessages" [dataSocketService]="dataSocketService"></app-radiomessage-list>
+  </div>
+} @else {
+  Loading...
+}

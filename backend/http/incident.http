@@ -1,0 +1,3 @@
+@basePath = localhost:8080
+
+GET {{basePath}}/incidents/open
