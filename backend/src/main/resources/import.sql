@@ -41,14 +41,14 @@ INSERT INTO incident (id, description, level, open) VALUES (3, 'Flooding in base
 INSERT INTO radio_message (id, vehicle_id, code, timestamp, incident_id) VALUES (NEXT VALUE FOR radio_message_seq, 1, 3, '2025-03-28 08:15:00', 1);
 INSERT INTO radio_message (id, vehicle_id, code, timestamp, incident_id) VALUES (NEXT VALUE FOR radio_message_seq, 2, 4, '2025-03-28 08:20:00', 1);
 INSERT INTO radio_message (id, vehicle_id, code, timestamp, incident_id) VALUES (NEXT VALUE FOR radio_message_seq, 3, 6, '2025-03-28 08:30:00', 1);
-INSERT INTO radio_message (id, vehicle_id, code, timestamp) VALUES (NEXT VALUE FOR radio_message_seq, 2, '2025-03-28 08:45:00');
-INSERT INTO radio_message (id, vehicle_id, code, timestamp) VALUES (NEXT VALUE FOR radio_message_seq, 1, '2025-03-28 09:00:00');
+INSERT INTO radio_message (id, vehicle_id, code, timestamp) VALUES (NEXT VALUE FOR radio_message_seq, 2, 2, '2025-03-28 08:45:00');
+INSERT INTO radio_message (id, vehicle_id, code, timestamp) VALUES (NEXT VALUE FOR radio_message_seq, 1, 1, '2025-03-28 09:00:00');
 
 -- Incident 2
 INSERT INTO radio_message (id, vehicle_id, code, timestamp, incident_id) VALUES (NEXT VALUE FOR radio_message_seq, 6, 3, '2025-03-28 09:15:00', 2);
 INSERT INTO radio_message (id, vehicle_id, code, timestamp, incident_id) VALUES (NEXT VALUE FOR radio_message_seq, 7, 4, '2025-03-28 09:20:00', 2);
 INSERT INTO radio_message (id, vehicle_id, code, timestamp, incident_id) VALUES (NEXT VALUE FOR radio_message_seq, 8, 5, '2025-03-28 09:30:00', 2);
-INSERT INTO radio_message (id, vehicle_id, code, timestamp) VALUES (NEXT VALUE FOR radio_message_seq, 9, 2, '2025-03-28 09:45:00',);
+INSERT INTO radio_message (id, vehicle_id, code, timestamp) VALUES (NEXT VALUE FOR radio_message_seq, 9, 2, '2025-03-28 09:45:00');
 INSERT INTO radio_message (id, vehicle_id, code, timestamp) VALUES (NEXT VALUE FOR radio_message_seq, 10, 1, '2025-03-28 10:00:00');
 
 -- Incident 3
